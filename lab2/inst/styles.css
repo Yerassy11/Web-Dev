@@ -1,0 +1,214 @@
+/* ===== БАЗА ===== */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* ===== ОСНОВНОЙ КОНТЕЙНЕР ===== */
+main {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    height: 90vh;
+    background-color: #ffffff;
+}
+
+/* ===== ЛЕВАЯ ЧАСТЬ ===== */
+.overview {
+    border-right: 1px solid #e0e0e0;
+    margin: 0;
+    width: 57%;
+    height: inherit;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+}
+
+.overview .logo img {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.photo {
+    margin: 0;
+    padding: 0;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+}
+
+.overview img {
+    height: 400px;
+    width: 500px;
+}
+
+/* ===== ТЕКСТ ===== */
+.hero {
+    max-width: 680px;
+    margin-left: 100px;
+    margin-top: 130px;
+    color: #000000;
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    line-height: 1.3;
+    text-align: center;
+}
+
+.accent-red {
+    color: #ff4d00;
+}
+
+.accent-pink {
+    color: #ff007a;
+}
+
+/* ===== ПРАВАЯ ЧАСТЬ (ФОРМА) ===== */
+.auth-bl {
+    margin: 0;
+    width: 43%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    color: #000000;
+    padding-top: 50px;
+}
+
+.auth-bl * {
+    width: 80%;
+}
+
+.title {
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+/* ===== INPUT ===== */
+.input {
+    font-weight: 600;
+    height: 30px;
+    padding: 14px;
+    margin-bottom: 10px;
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.input::placeholder {
+    color: #888;
+}
+
+/* ===== КНОПКИ ===== */
+button {
+    height: 43px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 14px;
+    cursor: pointer;
+    margin: 20px 0;
+}
+
+.btn-login {
+    background-color: #1877f2;
+    color: #ffffff;
+    border: none;
+}
+
+.btn-login:hover {
+    background-color: #145dbf;
+}
+
+.forgot {
+    background-color: transparent;
+    color: #1877f2;
+}
+
+.btn-facebook,
+.btn-register {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+}
+
+/* ===== META ===== */
+.meta {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: #000000;
+}
+
+.meta img {
+    margin-left: 40%;
+    margin-right: 10px;
+    height: 15px;
+    width: 15px;
+}
+
+/* ===== FOOTER ===== */
+.meta-footer {
+    border-top: 1px solid #e0e0e0;
+    background-color: #ffffff;
+    padding: 20px 40px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #666;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #666;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    color: #666;
+}
+.btn-register {
+    background-color: #1877f2;      /* синий Instagram */
+    color: #ffffff;
+    border: none;
+    font-weight: 600;
+    box-shadow: 0 0 12px rgba(24, 119, 242, 0.6); /* эффект "свечения" */
+    transition: all 0.25s ease;
+}
+
+.btn-register {
+    background-color: #ffffff;    
+    color: #1877f2;                
+    border: 1px solid #1877f2;
+    font-weight: 600;
+    box-shadow: 0 0 8px rgba(24, 119, 242, 0.4); /* мягкое свечение текста */
+    transition: all 0.25s ease;
+}
+
+.btn-register:hover {
+    color: #145dbf;
+    box-shadow: 0 0 14px rgba(24, 119, 242, 0.8);
+}
