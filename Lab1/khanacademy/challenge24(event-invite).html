@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Приглашение: Вечеринка выпускников</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: linear-gradient(180deg,#f7fafc,#eef2f7); 
+      color: #222; 
+      margin: 0; 
+      padding: 24px; 
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+
+    .invite {
+      background: #fff;
+      max-width: 820px;
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(17,24,39,0.08); 
+      padding: 28px;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 16px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    .tagline {
+      color: #555;
+      margin-top: 6px;
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 20px; /* gap */
+      align-items: start;
+    }
+
+    .details {
+      background: #fbfdff;
+      border: 1px solid #e6eef8;
+      padding: 18px;
+      border-radius: 8px;
+    }
+
+    .details p { margin: 8px 0; }
+
+    .details time {
+      font-weight: 600;
+      display: inline-block;
+      margin-right: 8px;
+    }
+
+    .guest-list {
+      list-style: none;
+      padding: 0;
+      margin: 8px 0 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .guest-list li {
+      padding: 8px;
+      background: linear-gradient(180deg,#ffffff,#f8fbff);
+      border: 1px solid #eef3fb;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    form.rsvp {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 6px;
+    }
+
+    label { font-size: 13px; color: #333; }
+
+    input[type="email"] {
+      padding: 10px 12px;
+      border-radius: 6px;
+      border: 1px solid #cfdbe9;
+      font-size: 14px;
+    }
+
+    .controls {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    button {
+      padding: 10px 14px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      background: linear-gradient(90deg,#4f46e5,#06b6d4);
+      color: white;
+    }
+
+    button.secondary {
+      background: transparent;
+      color: #334155;
+      border: 1px solid #e2e8f0;
+    }
+
+    footer {
+      margin-top: 18px;
+      font-size: 13px;
+      color: #64748b;
+    }
+
+    @media (max-width: 760px) {
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main class="invite" role="main" aria-labelledby="event-title">
+    <header>
+      <div>
+        <h1 id="event-title">Вечеринка выпускников — Reunion Night</h1>
+        <div class="tagline">Ностальгия, улыбки и танцы под живую музыку</div>
+      </div>
+    </header>
+
+    <div class="grid">
+      <section class="details" aria-labelledby="details-heading">
+        <h2 id="details-heading">Детали события</h2>
+        <p><time datetime="2026-06-12T19:00">12 июня 2026, 19:00</time> — начало</p>
+        <p><strong>Место:</strong> Клуб "Орион", ул. Абая, 45 (зал на втором этаже)</p>
+        <p><strong>Dress code:</strong> Smart casual — чувствуй себя комфортно, но празднично.</p>
+
+        <h3>Программа вечера</h3>
+        <ul>
+          <li>19:00 — Приветственное слово и фуршет</li>
+          <li>20:00 — Выступление живой группы</li>
+          <li>21:30 — Танцы и розыгрыши</li>
+          <li>23:45 — Финал, фото на память</li>
+        </ul>
+
+        <h3>Контакты организатора</h3>
+        <p>Организатор: Асем К. — <a href="mailto:asem.organizer@example.com">asem.organizer@example.com</a></p>
+
+        <footer>
+          <p>Обратите внимание: вход по предварительной регистрации. Места ограничены.</p>
+        </footer>
+      </section>
+
+      <aside aria-labelledby="guests-heading">
+        <h2 id="guests-heading">Гости (подтвердили)</h2>
+        <ul class="guest-list" aria-live="polite">
+          <li>Саурана Т.</li>
+          <li>Арлен Б.</li>
+          <li>Нурали Ж.</li>
+          <li>Мадина С.</li>
+        </ul>
+
+        <h3 style="margin-top:14px;">Подтвердить участие </h3>
+        <form class="rsvp" action="#" method="post" aria-label="Форма подтверждения участия">
+          <label for="email">Email для подтверждения</label>
+          <input id="email" name="email" type="email" placeholder="ваш@email.com" required>
+
+          <label for="guests">Количество гостей (включая вас)</label>
+          <input id="guests" name="guests" type="number" min="1" max="6" value="1" required>
+
+          <div class="controls">
+            <button type="submit">Подтвердить</button>
+            <button type="button" class="secondary" onclick="alert('Форма временно работает локально — замените действие на серверное при необходимости')">Запросить подробности</button>
+          </div>
+        </form>
+
+        <p style="font-size:12px; color:#6b7280; margin-top:8px;">Вы получите письмо с напоминанием за 3 дня до события.</p>
+      </aside>
+    </div>
+  </main>
+</body>
+</html>
