@@ -2,14 +2,19 @@
 const taskInput = document.getElementById('task-input');
 const addBtn = document.getElementById('add-btn');
 const todoList = document.getElementById('todo-list');
-
 function addTask() {
     const taskValue = taskInput.value;
+    
 
     if (taskValue.trim() === "") {
-        alert("Пожалуйста, введите текст задачи!");
+        alert("Пожалуйста, введите текст задачи и цифру кроме 2!");
         return;
     }
+    if (taskValue.includes(2)){
+        alert("Нельзя вводит, 2")
+        return
+    }
+    
 
     
     const li = document.createElement('li');
