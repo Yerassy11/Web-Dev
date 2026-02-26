@@ -1,0 +1,60 @@
+<article class="card">
+  <!-- LINK to kaspi.kz (new tab) -->
+  <a class="imageLink" [href]="kaspiUrl" target="_blank" rel="noopener noreferrer">
+    <img class="mainImage" [src]="selectedImage" [alt]="product.name" />
+  </a>
+
+  <!-- GALLERY (bonus): thumbnails -->
+  <div class="thumbs" *ngIf="product.images?.length">
+    <button
+      class="thumb"
+      *ngFor="let img of product.images"
+      type="button"
+      (click)="selectImage(img)"
+      [class.active]="img === selectedImage"
+      aria-label="Select image"
+    >
+      <img [src]="img" [alt]="product.name" />
+    </button>
+  </div>
+
+  <div class="content">
+    <h3 class="title">
+      <a [href]="kaspiUrl" target="_blank" rel="noopener noreferrer">
+        {{ product.name }}
+      </a>
+    </h3>
+
+    <p class="desc">{{ product.description }}</p>
+
+    <div class="meta">
+      <div class="price">{{ product.price | number }} ₸</div>
+
+      <div class="rating">
+        <!-- stars -->
+        <span class="star filled" *ngFor="let _ of [].constructor(fullStars)">★</span>
+        <span class="star half" *ngIf="hasHalfStar">★</span>
+        <span class="star empty" *ngFor="let _ of [].constructor(emptyStars)">★</span>
+
+        <span class="badge">{{ product.rating }}</span>
+      </div>
+    </div>
+
+    <div class="actions">
+      <!-- Share WhatsApp -->
+      <a class="btn" [href]="whatsappShareUrl" target="_blank" rel="noopener noreferrer">
+        WhatsApp
+      </a>
+
+      <!-- Share Telegram -->
+      <a class="btn secondary" [href]="telegramShareUrl" target="_blank" rel="noopener noreferrer">
+        Telegram
+      </a>
+
+      <!-- Open kaspi -->
+      <a class="btn ghost" [href]="kaspiUrl" target="_blank" rel="noopener noreferrer">
+        Kaspi
+      </a>
+    </div>
+  </div>
+</article>
