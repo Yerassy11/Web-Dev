@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Project: Recipe book</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.4;
+            margin: 20px;
+        }
+        table {
+            border-collapse: collapse;
+            margin-top: 8px;
+            width: 60%;
+        }
+        th, td {
+            border: 1px solid #333;
+            padding: 6px;
+            text-align: left;
+        }
+
+        #contents {
+            margin-bottom: 12px;
+        }
+
+        .recipe {
+            margin-top: 24px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #ddd;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Alex's Recipe Book</h1>
+
+    <h2 id="contents">Contents:</h2>
+    <ol>
+        <li><a href="#recipe1">Recipe #1 — Scrambled Eggs</a></li>
+        <li><a href="#recipe2">Recipe #2 — Fruit Salad</a></li>
+        <li><a href="#recipe3">Recipe #3 — Simple Pasta</a></li>
+    </ol>
+
+    <!-- Recipe 1 -->
+    <section class="recipe" id="recipe1">
+        <h2>Recipe #1 — Scrambled Eggs</h2>
+
+        <ul>
+            <li>Time: 10 minutes</li>
+            <li>Serves: 1</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Eggs</td><td>2</td></tr>
+                <tr><td>Salt</td><td>1 pinch</td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>Step 1:</strong> Beat the eggs with a pinch of salt.</p>
+        <p><strong>Step 2:</strong> Cook in a non-stick pan over medium heat, stirring until set.</p>
+    </section>
+
+    <!-- Recipe 2 -->
+    <section class="recipe" id="recipe2">
+        <h2>Recipe #2 — Fruit Salad</h2>
+
+        <ul>
+            <li>Time: 15 minutes</li>
+            <li>Serves: 2</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Apple</td><td>1</td></tr>
+                <tr><td>Banana</td><td>1</td></tr>
+            </tbody>
+        </table>
+
+        <p><strong>Step 1:</strong> Chop fruit into bite-sized pieces.</p>
+        <p><strong>Step 2:</strong> Toss together and serve chilled.</p>
+    </section>
+
+    <section class="recipe" id="recipe3">
+        <h2>Recipe #3 — Simple Pasta</h2>
+
+        <ul>
+            <li>Time: 20 minutes</li>
+            <li>Serves: 2</li>
+        </ul>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ingredients</th>
+                    <th>Quantity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Pasta</td><td>150 g</td></tr>
+                <tr><td>Olive oil</td><td>1 tbsp</td></tr>
+            </tbody>
+        </table>
+
+        <ol>
+            <li>Boil the pasta until al dente.</li>
+            <li>Drain and toss with olive oil; season to taste.</li>
+        </ol>
+    </section>
+
+    <p><em>Sources: <a href="" target="_blank">Some recipe website</a></em></p>
+
+</body>
+</html>

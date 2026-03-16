@@ -1,0 +1,28 @@
+<section class="page">
+  <header class="header">
+    <h1>Online Store</h1>
+    <p>Выберите категорию — товары загрузятся сразу.</p>
+  </header>
+
+  <nav class="categories">
+    @for (c of categories; track c.id) {
+      <button
+        type="button"
+        class="catBtn"
+        [class.active]="isSelected(c.id)"
+        (click)="selectCategory(c.id)"
+      >
+        {{ c.name }}
+      </button>
+    }
+  </nav>
+
+  @if (selectedCategoryId() === null) {
+    <div class="hint">
+      <strong>Добро пожаловать!</strong>
+      <div>Выберите категорию выше, чтобы увидеть товары.</div>
+    </div>
+  } @else {
+    <app-product-list [products]="selectedProducts()"></app-product-list>
+  }
+</section>

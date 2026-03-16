@@ -1,0 +1,67 @@
+.card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+.mainImage {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  background: #f3f3f3;
+}
+.thumbs { display: flex; gap: 8px; padding: 10px 12px 0; }
+.thumb {
+  border: 1px solid #e7e7e7;
+  background: #fff;
+  border-radius: 10px;
+  padding: 0;
+  width: 52px;
+  height: 52px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.thumb img { width: 100%; height: 100%; object-fit: cover; }
+.thumb.active { border-color: #111; }
+
+.content { padding: 12px 14px 14px; display: flex; flex-direction: column; gap: 10px; }
+.title { margin: 0; font-size: 16px; line-height: 1.25; }
+.title a { color: #111; text-decoration: none; }
+.title a:hover { text-decoration: underline; }
+
+.desc { margin: 0; color: #555; font-size: 13px; line-height: 1.35; }
+
+.meta { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.price { font-size: 16px; font-weight: 700; }
+
+.rating { display: flex; align-items: center; gap: 8px; }
+.badge, .likes {
+  font-size: 12px;
+  padding: 2px 8px;
+  border-radius: 999px;
+  border: 1px solid #eee;
+  color: #333;
+}
+
+.actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.btn {
+  padding: 9px 10px;
+  border-radius: 10px;
+  border: 1px solid #e7e7e7;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn.danger { background: #c62828; border-color: #c62828; }
+.btn.ghost { background: transparent; color: #111; }
+.btn.link { background: #1f6feb; border-color: #1f6feb; }
