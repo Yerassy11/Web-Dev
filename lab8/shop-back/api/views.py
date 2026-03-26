@@ -2,7 +2,7 @@ from django.http import JsonResponse
 from .models import Product, Category
 
 
-# ---------- HELPERS ----------
+
 def product_to_dict(product):
     return {
         "id": product.id,
